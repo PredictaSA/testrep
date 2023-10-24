@@ -1,0 +1,36 @@
+{
+  "metadata": {
+    "name": "Data_Prep.csv",
+    "asset_type": "data_asset",
+    "origin_country": "us",
+    "asset_category": "USER",
+    "created_at": "2023-10-24T12:42:47Z",
+    "created": 1698151367983,
+    "asset_id": "data_asset.DataPrepcsv",
+    "asset_attributes": [
+      "data_asset"
+    ]
+  },
+  "entity": {
+    "data_asset": {
+      "dataset": false,
+      "mime_type": "text/csv"
+    }
+  },
+  "attachments": [
+    {
+      "asset_type": "data_asset",
+      "name": "Data_Prep.csv",
+      "mime": "text/csv",
+      "object_key": "data_asset/Data_Prep.csv",
+      "is_referenced": true,
+      "is_managed": false,
+      "user_data": {},
+      "is_partitioned": false,
+      "object_key_is_read_only": true,
+      "created_at": "2023-10-24T12:42:48Z",
+      "id": "7a63abab-5252-4d5c-8685-6fbd5ead055e",
+      "is_remote": false
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "name": "test",
+    "description": "",
+    "asset_type": "machine-learning-stream",
+    "origin_country": "us",
+    "owner_id": "1000330999",
+    "asset_category": "USER",
+    "created_at": "2023-10-24T12:42:50Z",
+    "created": 1698151370072,
+    "asset_id": "machine-learning-stream.test",
+    "asset_attributes": [
+      "machine-learning-stream",
+      "machine-learning-canvas-flow"
+    ]
+  },
+  "entity": {
+    "machine-learning-stream": {
+      "properties": {
+        "runtime": "spss-modeler",
+        "lock": {}
+      },
+      "flow_type": "spss"
+    },
+    "machine-learning-canvas-flow": {
+      "properties": {}
+    }
+  },
+  "attachments": [
+    {
+      "asset_type": "machine-learning-canvas-flow",
+      "object_key_is_read_only": false,
+      "object_key": "machine-learning-stream/machine-learning-stream.test.str",
+      "user_data": {},
+      "created_at": "2023-10-24T12:42:50Z",
+      "id": "9fdc6e3f-41cb-42b4-9d92-8f342d6b1a83",
+      "is_managed": false,
+      "is_referenced": true,
+      "is_remote": false
+    }
+  ]
+}

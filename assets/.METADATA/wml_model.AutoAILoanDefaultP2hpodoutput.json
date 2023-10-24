@@ -1,0 +1,245 @@
+{
+  "metadata": {
+    "name": "AutoAI_LoanDefault-P2_hpo_d_output",
+    "tags": [
+      "parent_run_5bb63334-51b7-401c-9888-50aec51f88a2"
+    ],
+    "asset_type": "wml_model",
+    "origin_country": "us",
+    "asset_category": "USER",
+    "created_at": "2023-10-24T12:42:49Z",
+    "created": 1698151369032,
+    "asset_id": "wml_model.AutoAILoanDefaultP2hpodoutput",
+    "asset_attributes": [
+      "wml_model",
+      "modelfacts_system",
+      "modelfacts_user"
+    ]
+  },
+  "entity": {
+    "wml_model": {
+      "hybrid_pipeline_software_specs": [
+        {
+          "base_id": "b4246d87-d8b3-5621-9fea-76a8ea452616",
+          "name": "autoai-kb_rt23.1-py3.10"
+        }
+      ],
+      "content_location": {
+        "contents": [
+          {
+            "content_format": "pipeline-node",
+            "file_name": "P2_automl.zip",
+            "location": "projects/be25fa40-e354-4dbf-96a3-5e9a80976251/assets/run_24fdb7a6-94ed-44f3-9f9f-bd403523c1ac/assets/c70ed2da-28ef-4f29-ba35-935256b3b86f/assets/c70ed2da-28ef-4f29-ba35-935256b3b86f_P2_hpo_d_output/resources/wml_model/P2_automl.zip",
+            "pipeline_node_id": "automl"
+          },
+          {
+            "content_format": "native",
+            "file_name": "pipeline_model.json",
+            "location": "projects/be25fa40-e354-4dbf-96a3-5e9a80976251/assets/run_24fdb7a6-94ed-44f3-9f9f-bd403523c1ac/assets/c70ed2da-28ef-4f29-ba35-935256b3b86f/assets/c70ed2da-28ef-4f29-ba35-935256b3b86f_P2_hpo_d_output/resources/wml_model/pipeline_model.json"
+          }
+        ],
+        "location": {
+          "path": "projects/be25fa40-e354-4dbf-96a3-5e9a80976251/assets/run_24fdb7a6-94ed-44f3-9f9f-bd403523c1ac/assets",
+          "notebooks_path": "projects/be25fa40-e354-4dbf-96a3-5e9a80976251/assets/run_24fdb7a6-94ed-44f3-9f9f-bd403523c1ac/assets/c70ed2da-28ef-4f29-ba35-935256b3b86f/notebooks",
+          "training": "projects/be25fa40-e354-4dbf-96a3-5e9a80976251/assets/run_24fdb7a6-94ed-44f3-9f9f-bd403523c1ac/assets/c70ed2da-28ef-4f29-ba35-935256b3b86f",
+          "training_status": "projects/be25fa40-e354-4dbf-96a3-5e9a80976251/assets/run_24fdb7a6-94ed-44f3-9f9f-bd403523c1ac/assets/c70ed2da-28ef-4f29-ba35-935256b3b86f/training-status.json",
+          "assets_path": "projects/be25fa40-e354-4dbf-96a3-5e9a80976251/assets/run_24fdb7a6-94ed-44f3-9f9f-bd403523c1ac/assets/c70ed2da-28ef-4f29-ba35-935256b3b86f/assets"
+        },
+        "type": "fs"
+      },
+      "label_column": "LOAN_DEFAULT",
+      "pipeline": {
+        "id": "wml_pipeline.AutoAILoanDefault"
+      },
+      "metrics": [
+        {
+          "context": {
+            "binary_classification": {},
+            "classes": [
+              "F",
+              "T"
+            ],
+            "features_importance": [
+              {
+                "computation_type": "",
+                "features": {
+                  "EDUCATION": 0,
+                  "NO_OF_DIFFERENT_PRODUCTS": 0.46,
+                  "GENDER": 0.12,
+                  "EMPLOYMENT": 0.16,
+                  "NATIONALITY": 0.12,
+                  "MARITAL_STATUS": 0.02,
+                  "OCCUPATION": 0.02,
+                  "AGE_IN_YEARS": 1
+                },
+                "stage": "Mean"
+              }
+            ],
+            "intermediate_model": {
+              "composition_steps": [
+                "Split_TrainingHoldout",
+                "TrainingDataset_full_9087_8",
+                "Column Selection",
+                "Datetime_FE",
+                "TrainingDataset_full_9087_8",
+                "Preprocessor_default",
+                "DAUB",
+                "hpo_d"
+              ],
+              "duration": 15832,
+              "location": {
+                "model": "projects/be25fa40-e354-4dbf-96a3-5e9a80976251/assets/run_24fdb7a6-94ed-44f3-9f9f-bd403523c1ac/assets/c70ed2da-28ef-4f29-ba35-935256b3b86f/data/automl/hpo_d_output/Pipeline1/model.pickle",
+                "pipeline": "projects/be25fa40-e354-4dbf-96a3-5e9a80976251/assets/run_24fdb7a6-94ed-44f3-9f9f-bd403523c1ac/assets/c70ed2da-28ef-4f29-ba35-935256b3b86f/data/automl/hpo_d_output/Pipeline1/pipeline.json",
+                "pipeline_model": "projects/be25fa40-e354-4dbf-96a3-5e9a80976251/assets/run_24fdb7a6-94ed-44f3-9f9f-bd403523c1ac/assets/c70ed2da-28ef-4f29-ba35-935256b3b86f/data/automl/hpo_d_output/Pipeline1/pipeline-model.json"
+              },
+              "name": "P2",
+              "notebook_location": "projects/be25fa40-e354-4dbf-96a3-5e9a80976251/assets/run_24fdb7a6-94ed-44f3-9f9f-bd403523c1ac/assets/c70ed2da-28ef-4f29-ba35-935256b3b86f/data/automl/hpo_d_output/Pipeline1/notebook.ipynb",
+              "pipeline_nodes": [
+                "ColumnSelector",
+                "PreprocessingTransformer",
+                "XGBClassifier"
+              ],
+              "process": "hpo_d_output"
+            },
+            "phase": "hpo_d_output",
+            "prediction_type": "binary"
+          },
+          "ml_metrics": {
+            "training_roc_auc": 0.8628547326290237,
+            "holdout_average_precision": 0.5598568609295834,
+            "holdout_neg_log_loss": -0.3628826949736196,
+            "training_accuracy": 0.8080774733135249,
+            "holdout_roc_auc": 0.8457464444139571,
+            "training_balanced_accuracy": 0.6509307280654987,
+            "training_f1": 0.45897584923724244,
+            "holdout_precision": 0.5681818181818182,
+            "training_average_precision": 0.5791004727254617,
+            "training_neg_log_loss": -0.3520721159827735,
+            "holdout_recall": 0.33783783783783783,
+            "training_precision": 0.603130943842992,
+            "holdout_accuracy": 0.7980198019801981,
+            "holdout_balanced_accuracy": 0.6327514062285635,
+            "training_recall": 0.3705502494976179,
+            "holdout_f1": 0.423728813559322
+          },
+          "timestamp": "2023-09-22T14:10:36.000Z"
+        }
+      ],
+      "ml_version": "4.0.18",
+      "type": "wml-hybrid_0.1",
+      "schemas": {
+        "input": [
+          {
+            "fields": [
+              {
+                "name": "CUST_ID",
+                "type": "double"
+              },
+              {
+                "name": "GENDER",
+                "type": "other"
+              },
+              {
+                "name": "MARITAL_STATUS",
+                "type": "other"
+              },
+              {
+                "name": "NATIONALITY",
+                "type": "other"
+              },
+              {
+                "name": "EDUCATION",
+                "type": "other"
+              },
+              {
+                "name": "EMPLOYMENT",
+                "type": "other"
+              },
+              {
+                "name": "OCCUPATION",
+                "type": "other"
+              },
+              {
+                "name": "AGE_IN_YEARS",
+                "type": "double"
+              },
+              {
+                "name": "NO_OF_DIFFERENT_PRODUCTS",
+                "type": "double"
+              }
+            ],
+            "id": "auto_ai_kb_input_schema"
+          }
+        ],
+        "output": []
+      },
+      "software_spec": {
+        "base_id": "8c1a58c6-62b5-4dc4-987a-df751c2756b6",
+        "name": "hybrid_0.1"
+      },
+      "content_import_state": "completed"
+    },
+    "modelfacts_system": {
+      "model_information": {
+        "model_type": "wml-hybrid_0.1",
+        "model_description": "",
+        "input_type": "",
+        "algorithm": "XGBClassifier",
+        "prediction_type": "binary",
+        "software_spec": "hybrid_0.1",
+        "software_spec_id": "8c1a58c6-62b5-4dc4-987a-df751c2756b6",
+        "asset_type": "wml_model",
+        "label_column": "LOAN_DEFAULT"
+      },
+      "training_information": {
+        "project_name": "PredictaDemo",
+        "training_data_references": [],
+        "hyper_parameters": "",
+        "hybrid_pipeline": [
+          {
+            "name": "autoai-kb_rt23.1-py3.10",
+            "id": "b4246d87-d8b3-5621-9fea-76a8ea452616"
+          }
+        ],
+        "features": 9
+      },
+      "model_identity_information": {
+        "model_identity_key": "c2d71fd0-21a2-489b-9125-e61cf08ea87c"
+      }
+    },
+    "modelfacts_user": {}
+  },
+  "attachments": [
+    {
+      "asset_type": "wml_model",
+      "name": "P2_automl.zip",
+      "object_key": "wml_model/78c7db37-b6e1-4d86-9b4e-1cd0cf7ed2ef/7467809f-d073-4aeb-af67-58b21ae83514",
+      "is_referenced": true,
+      "is_managed": false,
+      "user_data": {
+        "content_format": "pipeline-node",
+        "pipeline_node_id": "automl"
+      },
+      "is_partitioned": false,
+      "object_key_is_read_only": false,
+      "created_at": "2023-10-24T12:42:49Z",
+      "id": "bbb4ec3a-fa24-4969-9961-4d9b8cc35013",
+      "is_remote": false
+    },
+    {
+      "asset_type": "wml_model",
+      "name": "pipeline_model.json",
+      "object_key": "wml_model/78c7db37-b6e1-4d86-9b4e-1cd0cf7ed2ef/429b5215-3884-415d-b21b-80a2d695d7c2",
+      "is_referenced": true,
+      "is_managed": false,
+      "user_data": {
+        "content_format": "native"
+      },
+      "is_partitioned": false,
+      "object_key_is_read_only": false,
+      "created_at": "2023-10-24T12:42:49Z",
+      "id": "f830f5d0-914b-42f9-a580-8968be03e0ec",
+      "is_remote": false
+    }
+  ]
+}

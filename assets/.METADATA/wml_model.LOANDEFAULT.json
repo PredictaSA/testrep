@@ -1,0 +1,134 @@
+{
+  "metadata": {
+    "name": "LOAN_DEFAULT",
+    "description": "",
+    "asset_type": "wml_model",
+    "origin_country": "us",
+    "asset_category": "USER",
+    "created_at": "2023-10-24T12:42:49Z",
+    "created": 1698151369133,
+    "asset_id": "wml_model.LOANDEFAULT",
+    "asset_attributes": [
+      "wml_model",
+      "modelfacts_system",
+      "modelfacts_user"
+    ]
+  },
+  "entity": {
+    "wml_model": {
+      "hybrid_pipeline_software_specs": [],
+      "software_spec": {
+        "base_id": "493bcb95-16f1-5bc5-bee8-81b8af80e9c7",
+        "name": "pmml-3.0_4.3"
+      },
+      "ml_version": "4.0.18",
+      "type": "pmml_4.2",
+      "schemas": {
+        "input": [
+          {
+            "fields": [
+              {
+                "metadata": {},
+                "name": "GENDER",
+                "nullable": true,
+                "type": "string"
+              },
+              {
+                "metadata": {},
+                "name": "MARITAL_STATUS",
+                "nullable": true,
+                "type": "string"
+              },
+              {
+                "metadata": {},
+                "name": "NATIONALITY",
+                "nullable": true,
+                "type": "string"
+              },
+              {
+                "metadata": {},
+                "name": "EMPLOYMENT",
+                "nullable": true,
+                "type": "string"
+              },
+              {
+                "metadata": {},
+                "name": "AGE_IN_YEARS",
+                "nullable": true,
+                "type": "double"
+              },
+              {
+                "metadata": {},
+                "name": "NO_OF_DIFFERENT_PRODUCTS",
+                "nullable": true,
+                "type": "integer"
+              }
+            ],
+            "id": "default_schema_id",
+            "type": "struct"
+          }
+        ],
+        "output": [
+          {
+            "fields": [
+              {
+                "metadata": {},
+                "name": "$R-LOAN_DEFAULT",
+                "nullable": true,
+                "type": "string"
+              },
+              {
+                "metadata": {},
+                "name": "$RC-LOAN_DEFAULT",
+                "nullable": true,
+                "type": "double"
+              }
+            ],
+            "id": "default_schema_id",
+            "type": "struct"
+          }
+        ]
+      }
+    },
+    "modelfacts_system": {
+      "model_information": {
+        "model_type": "pmml_4.2",
+        "model_description": "",
+        "input_type": "",
+        "algorithm": "",
+        "prediction_type": "",
+        "software_spec": "pmml-3.0_4.3",
+        "software_spec_id": "493bcb95-16f1-5bc5-bee8-81b8af80e9c7",
+        "asset_type": "wml_model",
+        "label_column": ""
+      },
+      "training_information": {
+        "project_name": "PredictaDemo",
+        "training_data_references": [],
+        "hyper_parameters": "",
+        "hybrid_pipeline": [],
+        "features": 6
+      },
+      "model_identity_information": {
+        "model_identity_key": "0122f34d-f6b1-4d54-b3bf-4bf3eff8797d"
+      }
+    },
+    "modelfacts_user": {}
+  },
+  "attachments": [
+    {
+      "asset_type": "wml_model",
+      "object_key": "wml_model/d129c15b-91a1-4e8c-a8da-6c60fe1df975/a92fba73-8fe4-4f8f-bb8a-20e2317d8f6d",
+      "is_referenced": true,
+      "is_managed": false,
+      "user_data": {
+        "content_format": "native"
+      },
+      "is_partitioned": false,
+      "object_key_is_read_only": false,
+      "created_at": "2023-10-24T12:42:49Z",
+      "id": "193f18ef-497f-43e4-8f7a-331f83b0f434",
+      "is_remote": false
+    }
+  ]
+}

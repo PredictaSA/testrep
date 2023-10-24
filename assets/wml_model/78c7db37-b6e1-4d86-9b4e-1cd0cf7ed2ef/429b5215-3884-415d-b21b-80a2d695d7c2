@@ -1,0 +1,56 @@
+{
+  "doc_type": "pipeline",
+  "pipelines": [{
+    "id": "97e9a43f-c198-4f29-acca-6ed9dddf29cb",
+    "nodes": [{
+      "id": "automl",
+      "op": "wml-http-score",
+      "outputs": [{
+        "id": "automl"
+      }],
+      "parameters": {
+        "output_logs": true,
+        "stage_flag": true,
+        "optimization": {
+          "daub_include_only_estimators": ["XGBClassifierEstimator"],
+          "learning_type": "binary",
+          "label": "LOAN_DEFAULT",
+          "max_num_daub_ensembles": 1,
+          "compute_pipeline_notebooks_flag": true,
+          "daub_adaptive_subsampling_max_mem_usage": 9000000000,
+          "holdout_param": 0.1,
+          "positive_label": "T",
+          "scorer_for_ranking": "accuracy"
+        },
+        "wml_status": {
+          "url": "https://internal-nginx-svc.cpd-instance.svc:12443/v4_private/trainings"
+        },
+        "storage": {
+          "exchange": "training-prod",
+          "url": "amqps://admin:jD56a7jjdmzl0mtEx1BdyeDd@rabbitmq-ha.cpd-instance.svc.cluster.local:5671"
+        }
+      },
+      "runtime_ref": "autoai",
+      "type": "execution_node"
+    }],
+    "runtime_ref": "hybrid"
+  }],
+  "primary_pipeline": "97e9a43f-c198-4f29-acca-6ed9dddf29cb",
+  "runtimes": [{
+    "app_data": {
+      "wml_data": {
+        "hardware_spec": {
+          "id": "b37eae80-df2b-594b-9712-6854e9dc1a97",
+          "name": "CPUx4"
+        },
+        "software_spec": {
+          "name": "autoai-kb_rt23.1-py3.10"
+        }
+      }
+    },
+    "id": "autoai",
+    "name": "auto_ai.kb",
+    "version": "sha256:e4042f1649a04eda0f7db203e8e2508438685ec76f5b9a8ff4ad09a923cce4e0"
+  }],
+  "version": "2.0"
+}
